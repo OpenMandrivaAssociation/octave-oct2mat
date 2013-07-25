@@ -1,3 +1,4 @@
+%define __noautoreq '.*/bin/awk|.*/bin/gawk'
 %define	pkgname oct2mat
 %define name	octave-%{pkgname}
 %define version 1.0.7
@@ -5,7 +6,7 @@
 Summary:	Convert Octave scripts into MATLAB-compatible style
 Name:		%{name}
 Version:	%{version}
-Release:        2
+Release:        3
 Source0:	%{pkgname}-%{version}.tar.gz
 License:	GPLv2+
 Group:		Sciences/Mathematics
@@ -13,8 +14,8 @@ Url:		http://octave.sourceforge.net/oct2mat/
 Conflicts:	octave-forge <= 20090607
 Requires:	octave >= 2.9.7
 BuildRequires:  octave-devel >= 2.9.9
-BuildRequires:  mesagl-devel
-BuildRequires:  mesaglu-devel
+BuildRequires:  pkgconfig(gl)
+BuildRequires:  pkgconfig(glu)
 BuildArch:	noarch
 
 %description
