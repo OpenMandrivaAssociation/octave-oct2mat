@@ -1,12 +1,9 @@
-%define __noautoreq '.*/bin/awk|.*/bin/gawk'
 %define	pkgname oct2mat
-%define name	octave-%{pkgname}
-%define version 1.0.7
 
 Summary:	Convert Octave scripts into MATLAB-compatible style
-Name:		%{name}
-Version:	%{version}
-Release:        3
+Name:       octave-%{pkgname}
+Version:	1.0.7
+Release:       3
 Source0:	%{pkgname}-%{version}.tar.gz
 License:	GPLv2+
 Group:		Sciences/Mathematics
@@ -43,15 +40,5 @@ mv %{pkgname}-%{version}/DESCRIPTION .
 %{_bindir}/test -x %{_bindir}/octave && %{_bindir}/octave -q -H --no-site-file --eval "pkg('rebuild');" || :
 
 %files
-%defattr(-,root,root)
 %doc COPYING DESCRIPTION
 %{_datadir}/octave/packages/%{pkgname}-%{version}
-
-
-
-%changelog
-* Thu Aug 18 2011 Lev Givon <lev@mandriva.org> 1.0.7-1mdv2012.0
-+ Revision: 695103
-- import octave-oct2mat
-
-
