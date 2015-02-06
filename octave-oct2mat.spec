@@ -3,7 +3,7 @@
 Summary:	Convert Octave scripts into MATLAB-compatible style
 Name:       octave-%{pkgname}
 Version:	1.0.7
-Release:        4
+Release:        5
 Source0:	%{pkgname}-%{version}.tar.gz
 License:	GPLv2+
 Group:		Sciences/Mathematics
